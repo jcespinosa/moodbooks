@@ -11,3 +11,17 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+*.bkp
+*.sh
+*.py
+*.*~
+composer
+composer.phar
+.DS_Store
+Thumbs.db
+TODO
+routes.txt
+diff.txt
+model.txt
+controller.txt
