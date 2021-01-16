@@ -21,6 +21,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Logging Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the log settings for your application. Out of
+    | the box, Laravel uses the Monolog PHP logging library. This gives
+    | you a variety of powerful log handlers / formatters to utilize.
+    |
+    */
+
+    'level' => env('LOG_LEVEL', 'debug'),
+    'max_files' => env('LOG_MAX_FILES', 10),
+
+    /*
+    |--------------------------------------------------------------------------
     | Log Channels
     |--------------------------------------------------------------------------
     |
@@ -98,6 +112,11 @@ return [
 
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
+        ],
+
+        'custom' => [
+            'driver' => 'custom',
+            'via' => App\Logging\CreateCustomLogger::class,
         ],
     ],
 
